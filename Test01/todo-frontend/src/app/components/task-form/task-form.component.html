@@ -1,0 +1,23 @@
+<h2>Add Task</h2>
+<form (ngSubmit)="onSubmit()">
+  <label>Assigned To:</label>
+  <input [(ngModel)]="task.assigned_to" name="assigned_to" required /><br />
+
+  <label>Status:</label>
+  <input [(ngModel)]="task.status" name="status" required /><br />
+
+  <label>Due Date:</label>
+  <input type="date" [(ngModel)]="task.due_date" name="due_date" required /><br />
+
+  <label>Priority:</label>
+  <select [(ngModel)]="task.priority" name="priority" required>
+    <option value="Low">Low</option>
+    <option value="Medium">Medium</option>
+    <option value="High">High</option>
+  </select><br />
+
+  <label>Comments:</label>
+  <textarea [(ngModel)]="task.comments" name="comments"></textarea><br />
+
+  <button type="submit">Add Task</button>
+</form>
